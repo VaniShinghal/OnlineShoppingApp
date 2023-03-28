@@ -1,0 +1,59 @@
+<app-navigation></app-navigation>
+<div class="container my-auto">
+  <h2 class="h1 text-center col-12 header-text">Add Product</h2>
+  <div>
+    <div class="d-flex align-items-center justify-content-center">
+
+      <form [formGroup]="productForm" (ngSubmit)="submit(productForm.value)" class="col-8 my-auto py-5  px-5 border border-light" ngNativeValidate>
+        <div class="form-group">
+          <label for="productName" class="form-label">Product Name</label>
+          <input id="productName" type="text" name="productName" formControlName="productName" required placeholder="Enter Unique Product Name"
+            class="form-control">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="productDescription" class="form-label">Product Description</label>
+            <input id="productDescription" type="text" name="productDescription" formControlName="productDescription" required placeholder="Enter Description"
+              class="form-control">
+          </div>
+        <br>
+        <div class="form-group">
+            <label for="price" class="form-label">Price</label>
+            <input id="price" type="number" name="price" formControlName="price" required placeholder="Enter price"
+              class="form-control">
+          </div>
+        <br>
+        <div class="form-group">
+            <label for="features" class="form-label">Features</label>
+            <input id="features" type="text" name="features" formControlName="features" required placeholder="Enter product features"
+              class="form-control">
+          </div>
+        <br>
+        <div class="form-group">
+            <label for="productStatus" class="form-label">Product Status</label>
+            <select id="productStatus" name="productStatus" formControlName="productStatus" placeholder="Select Product Status" class="form-control" required >
+                <option value="HURRY UP TO PURCHASE">HURRY UP TO PURCHASE</option>
+                <option value="OUT OF STOCK">OUT OF STOCK</option>
+            </select>
+          </div>
+        <br>
+        <div class="form-group">
+            <label for="noOfProducts" class="form-label">No Of Products</label>
+            <input id="noOfProducts" type="number" name="noOfProducts" formControlName="noOfProducts" required placeholder="How many units are in stock?"
+              class="form-control">
+          </div>
+        <br>
+        
+        <div class="py-3">
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary btn-lg text-center col-6">Add Product</button>
+          </div>
+          <div class="d-flex justify-content-center action-container">
+            <a  routerLink="/adminHome">Return to Admin Console</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
